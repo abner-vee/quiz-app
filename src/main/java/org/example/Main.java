@@ -28,7 +28,8 @@ public class Main {
         for (int i = 0; i < questions.size(); i++) {
             Question currentQuestion = questions.get(i);
             System.out.println(currentQuestion.getText());
-            int userAnswer = scanner.nextInt();
+            Scanner scan = new Scanner(System.in);
+            int userAnswer = scan.nextInt();
 
             if (userAnswer == currentQuestion.getAnswer()) {
                 studentScore = studentScore + currentQuestion.getMarks();
